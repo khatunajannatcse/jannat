@@ -1,0 +1,9 @@
+baseURL = 'https://khatunajannatcse.github.io/'
+languageCode = 'en-us'
+title = 'Khatun A Jannat'
+
+[params]
+email = "261-25-010@diu.edu.bd"
+phone = "01788913280"
+github = "https://github.com/khatunajannatcse"
+linkedin = "https://linkedin.com"

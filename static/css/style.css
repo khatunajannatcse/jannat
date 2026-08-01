@@ -1,0 +1,265 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    color: #333333;
+}
+
+/* NAVBAR */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 80px;
+    background-color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar .site-title {
+    font-size: 26px;
+    font-weight: 700;
+    color: #2b2b2b;
+}
+
+.navbar nav a {
+    margin-left: 25px;
+    text-decoration: none;
+    color: #4a4a4a;
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.navbar nav a:hover {
+    color: #0056b3;
+}
+
+/* CONTAINER */
+.container {
+    display: flex;
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 0 20px;
+    gap: 50px;
+}
+
+/* SIDEBAR STYLING */
+.sidebar {
+    width: 320px;
+    background: #ffffff;
+    padding: 30px 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+    text-align: center;
+    flex-shrink: 0;
+    height: fit-content;
+}
+
+/* Circular Image with Blue Border */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.profile-pic {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #1a73e8;
+    padding: 3px;
+}
+
+/* Sidebar Text Details */
+.sidebar-name {
+    font-size: 26px;
+    font-weight: 700;
+    color: #222222;
+    margin-bottom: 12px;
+}
+
+.sidebar-role {
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 4px;
+}
+
+.sidebar-dept {
+    font-size: 15px;
+    color: #555555;
+    margin-bottom: 2px;
+    line-height: 1.3;
+}
+
+.sidebar-major {
+    font-size: 15px;
+    font-weight: 600;
+    color: #222222;
+    margin-bottom: 15px;
+}
+
+.sidebar-location, .sidebar-email {
+    font-size: 14px;
+    color: #555555;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+.sidebar-email a {
+    color: #555555;
+    text-decoration: none;
+    word-break: break-all;
+}
+
+.sidebar-email a:hover {
+    color: #1a73e8;
+}
+
+.sidebar-location i, .sidebar-email i {
+    color: #1a73e8;
+    font-size: 16px;
+}
+
+/* Social Icons (GitHub, LinkedIn, Scholar) */
+.sidebar-socials {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.sidebar-socials a {
+    color: #1a73e8;
+    font-size: 26px;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.sidebar-socials a:hover {
+    color: #0b57d0;
+    transform: translateY(-2px);
+}
+
+/* Download CV Blue Button */
+.download-cv-btn {
+    display: block;
+    width: 100%;
+    padding: 12px 0;
+    background-color: #1a73e8;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    transition: background-color 0.2s, transform 0.1s;
+}
+
+.download-cv-btn:hover {
+    background-color: #0b57d0;
+}
+
+/* RIGHT MAIN CONTENT */
+.content {
+    flex-grow: 1;
+    background: #ffffff;
+    padding: 35px 40px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+}
+
+.content section {
+    margin-bottom: 40px;
+    scroll-margin-top: 90px;
+}
+
+.content h2 {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    color: #222222;
+    border-bottom: 3px solid #1a73e8;
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+.content p {
+    line-height: 1.6;
+    color: #444444;
+    font-size: 15px;
+    margin-top: 10px;
+}
+
+.item {
+    margin-top: 15px;
+    margin-bottom: 18px;
+}
+
+.item h3 {
+    font-size: 16px;
+    font-weight: 600;
+    color: #111111;
+}
+
+.item .institution {
+    font-size: 14px;
+    color: #666666;
+}
+
+/* RESEARCH INTERESTS CARD BOXES */
+.interest-tags {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+    align-items: flex-start;
+}
+
+.tag-box {
+    background-color: #ffffff;
+    padding: 16px 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    font-size: 16px;
+    font-weight: 500;
+    color: #2b2b2b;
+    border: 1px solid #f0f0f0;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    width: fit-content;
+    min-width: 240px;
+}
+
+.tag-box:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* CURRENT RESEARCH CARD */
+.current-research-card {
+    background-color: #ffffff;
+    padding: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+    border: 1px solid #f0f0f0;
+    margin-top: 20px;
+    line-height: 1.6;
+    color: #333333;
+    font-size: 15px;
+}
+
+.current-research-card strong {
+    color: #111111;
+    font-size: 16px;
+}
