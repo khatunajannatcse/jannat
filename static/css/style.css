@@ -1,4 +1,4 @@
-/* RESET & BASE STYLES */
+/* RESET & FONTS */
 * {
     margin: 0;
     padding: 0;
@@ -34,13 +34,13 @@ body {
     color: #1a202c;
 }
 
-.navbar nav {
+.navbar nav, .nav-links {
     display: flex;
     flex-wrap: wrap;
     gap: 16px;
 }
 
-.navbar nav a {
+.navbar nav a, .nav-links a {
     text-decoration: none;
     color: #4a5568;
     font-weight: 600;
@@ -48,7 +48,7 @@ body {
     transition: color 0.2s;
 }
 
-.navbar nav a:hover {
+.navbar nav a:hover, .nav-links a:hover {
     color: #1a73e8;
 }
 
@@ -229,39 +229,49 @@ footer {
 }
 
 /* ==========================================
-   MOBILE SCREEN FIX (PHONES)
+   MOBILE PHONE SCREEN FIX (AFIA'S STACKED STYLE)
    ========================================== */
 @media screen and (max-width: 850px) {
     .navbar {
         position: relative !important;
-        flex-direction: column !important;
+        display: flex !important;
+        flex-direction: column !important; /* Stack Name on top, Links below */
         justify-content: center !important;
         align-items: center !important;
         padding: 20px 10px 15px 10px !important;
         height: auto !important;
+        background-color: #ffffff !important;
         box-shadow: none !important;
-        border-bottom: 1px solid #e2e8f0;
+        border-bottom: 1px solid #e2e8f0 !important;
     }
 
     .site-title {
-        font-size: 1.7rem !important;
+        font-size: 1.8rem !important;
+        font-weight: 700 !important;
+        color: #1a202c !important;
         margin-bottom: 12px !important;
         text-align: center !important;
+        width: 100 !important;
     }
 
-    .navbar nav {
+    .navbar nav, .nav-links {
+        display: flex !important;
+        flex-wrap: wrap !important;
         justify-content: center !important;
-        gap: 10px 14px !important;
+        align-items: center !important;
+        gap: 8px 14px !important;
         width: 100% !important;
     }
 
-    .navbar nav a {
-        font-size: 0.9rem !important;
+    .navbar nav a, .nav-links a {
+        font-size: 0.92rem !important;
+        font-weight: 600 !important;
+        color: #2d3748 !important;
     }
 
     .page-wrapper {
         flex-direction: column !important;
-        margin-top: 25px !important; /* Space between header links and profile card */
+        margin-top: 20px !important;
         padding: 0 15px !important;
     }
 
