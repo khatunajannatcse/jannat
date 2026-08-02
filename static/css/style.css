@@ -149,18 +149,10 @@ a:hover {
     margin-bottom: 35px;
 }
 
-.welcome-heading {
-    font-size: 1.8rem;
-    color: #2d3748;
-    font-weight: 500;
-    margin-bottom: 15px;
-    border-bottom: 1px solid #e2e8f0;
-    padding-bottom: 8px;
-}
-
-/* BRIGHT BLUE SECTION HEADINGS */
+/* BRIGHT BLUE HEADINGS (WELCOME & SECTIONS) */
+.welcome-heading, 
 .section-title {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     color: #0000ff !important;
     font-weight: bold;
     margin-bottom: 20px;
@@ -217,15 +209,26 @@ a:hover {
 }
 
 /* ==========================================
-   FOOTER
+   CLEAN FOOTER (NO BLUE BLOCK)
    ========================================== */
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 25px 0;
     border-top: 1px solid #e2e8f0;
+    margin-top: 40px;
+    background-color: #ffffff;
+}
+
+footer p {
+    font-size: 0.9rem;
+    color: #4a5568;
+    margin-bottom: 4px;
+    font-weight: 500;
+}
+
+.footer-subtext {
     font-size: 0.85rem;
     color: #718096;
-    margin-top: 40px;
 }
 
 /* ==========================================
