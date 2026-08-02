@@ -1,4 +1,6 @@
-/* GLOBAL RESETS & STYLES */
+/* ==========================================
+   GLOBAL RESETS & FONTS
+   ========================================== */
 * {
     margin: 0;
     padding: 0;
@@ -21,7 +23,9 @@ a:hover {
     text-decoration: underline;
 }
 
-/* TOP NAVBAR */
+/* ==========================================
+   TOP NAVIGATION BAR
+   ========================================== */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -52,7 +56,9 @@ a:hover {
     color: #2b6cb0;
 }
 
-/* LAYOUT STRUCTURE */
+/* ==========================================
+   PAGE LAYOUT & CONTAINER
+   ========================================== */
 .page-wrapper {
     display: flex;
     max-width: 1200px;
@@ -61,7 +67,9 @@ a:hover {
     gap: 40px;
 }
 
-/* SIDEBAR */
+/* ==========================================
+   LEFT SIDEBAR
+   ========================================== */
 .sidebar {
     width: 250px;
     flex-shrink: 0;
@@ -72,7 +80,7 @@ a:hover {
     height: 200px;
     border: 1px solid #cbd5e0;
     padding: 4px;
-    background-color: #fff;
+    background-color: #ffffff;
     margin-bottom: 15px;
 }
 
@@ -130,7 +138,9 @@ a:hover {
     font-size: 0.75rem;
 }
 
-/* MAIN CONTENT AREA */
+/* ==========================================
+   RIGHT MAIN CONTENT
+   ========================================== */
 .content {
     flex-grow: 1;
 }
@@ -148,11 +158,12 @@ a:hover {
     padding-bottom: 8px;
 }
 
+/* BRIGHT BLUE SECTION HEADINGS */
 .section-title {
-    font-size: 1.4rem;
-    color: #0000ff; /* Blue title matching 2nd picture */
+    font-size: 1.5rem;
+    color: #0000ff !important;
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .about-text {
@@ -161,40 +172,53 @@ a:hover {
     margin-bottom: 12px;
 }
 
-.academic-list-box {
+.skills-box {
     margin-top: 15px;
-    font-size: 0.95rem;
-}
-
-.academic-list-box ul {
-    margin-left: 20px;
-    margin-top: 5px;
-}
-
-/* BLUE ACADEMIC CARD BOXES (MATCHING IMAGE 2) */
-.academic-card {
-    border: 1px solid #3182ce;
+    padding: 12px;
+    background-color: #f7fafc;
+    border: 1px solid #e2e8f0;
     border-radius: 4px;
-    margin-bottom: 20px;
-    overflow: hidden;
-}
-
-.academic-card-header {
-    background-color: #3182ce; /* Academic Blue Box Header */
-    color: #ffffff;
-    font-weight: bold;
-    padding: 10px 15px;
-    font-size: 1rem;
-}
-
-.academic-card-body {
-    padding: 15px;
-    background-color: #ffffff;
-    font-size: 0.92rem;
+    font-size: 0.9rem;
     color: #2d3748;
 }
 
-/* FOOTER */
+/* ==========================================
+   BLUE ACADEMIC CARD BANNERS
+   ========================================== */
+.edu-card {
+    border: 1px solid #3182ce !important;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+
+.edu-header {
+    background-color: #3182ce !important;
+    color: #ffffff !important;
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: 10px 15px;
+}
+
+.edu-body {
+    padding: 15px;
+    color: #2d3748;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.edu-body p {
+    margin-bottom: 4px;
+}
+
+.edu-body p:last-child {
+    margin-bottom: 0;
+}
+
+/* ==========================================
+   FOOTER
+   ========================================== */
 footer {
     text-align: center;
     padding: 20px;
@@ -204,7 +228,9 @@ footer {
     margin-top: 40px;
 }
 
-/* MOBILE RESPONSIVE */
+/* ==========================================
+   MOBILE RESPONSIVE DESIGN
+   ========================================== */
 @media (max-width: 768px) {
     .page-wrapper {
         flex-direction: column;

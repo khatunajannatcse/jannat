@@ -4,13 +4,240 @@
 	<meta name="generator" content="Hugo 0.164.0">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Khatun A Jannat - Academic Portfolio</title>
+    <title>Khatun A Jannat - Academic Homepage</title>
     
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     
-    <link rel="stylesheet" href="./css/style.css">
+    <style>
+         
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #2b6cb0;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+         
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 10%;
+            background-color: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .site-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #2d3748;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #4a5568;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #2b6cb0;
+        }
+
+         
+        .page-wrapper {
+            display: flex;
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+            gap: 40px;
+        }
+
+         
+        .sidebar {
+            width: 250px;
+            flex-shrink: 0;
+        }
+
+        .profile-container {
+            width: 180px;
+            height: 200px;
+            border: 1px solid #cbd5e0;
+            padding: 4px;
+            background-color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .profile-pic {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .sidebar-email {
+            font-size: 0.85rem;
+            color: #4a5568;
+            margin-bottom: 15px;
+        }
+
+        .sidebar-socials {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 25px;
+        }
+
+        .sidebar-socials a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background-color: #3182ce;
+            color: #ffffff !important;
+            border-radius: 3px;
+            font-size: 0.9rem;
+        }
+
+        .sidebar-links-box h4 {
+            font-size: 1.1rem;
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+
+        .sidebar-links-box ul {
+            list-style-type: none;
+        }
+
+        .sidebar-links-box li {
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+            padding-left: 12px;
+            position: relative;
+        }
+
+        .sidebar-links-box li::before {
+            content: "📌";
+            position: absolute;
+            left: 0;
+            font-size: 0.75rem;
+        }
+
+         
+        .content {
+            flex-grow: 1;
+        }
+
+        .main-section {
+            margin-bottom: 35px;
+        }
+
+        .welcome-heading {
+            font-size: 1.8rem;
+            color: #2d3748;
+            font-weight: 500;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 8px;
+        }
+
+         
+        .section-title {
+            font-size: 1.5rem;
+            color: #0000ff !important;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .about-text {
+            font-size: 0.95rem;
+            color: #2d3748;
+            margin-bottom: 12px;
+        }
+
+        .skills-box {
+            margin-top: 15px;
+            padding: 12px;
+            background-color: #f7fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: #2d3748;
+        }
+
+         
+        .edu-card {
+            border: 1px solid #3182ce !important;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            background-color: #ffffff;
+        }
+
+        .edu-header {
+            background-color: #3182ce !important;
+            color: #ffffff !important;
+            font-weight: 600;
+            font-size: 1.05rem;
+            padding: 10px 15px;
+        }
+
+        .edu-body {
+            padding: 15px;
+            color: #2d3748;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .edu-body p {
+            margin-bottom: 4px;
+        }
+
+        .edu-body p:last-child {
+            margin-bottom: 0;
+        }
+
+         
+        footer {
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #e2e8f0;
+            font-size: 0.85rem;
+            color: #718096;
+            margin-top: 40px;
+        }
+
+         
+        @media (max-width: 768px) {
+            .page-wrapper {
+                flex-direction: column;
+            }
+            .navbar {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -69,14 +296,10 @@
                 <p class="about-text">
                     I am passionate about using AI and data science to solve real-world problems and create positive social impact. My mission is to contribute to the development of intelligent, interpretable software and decision support systems for societal benefit.
                 </p>
-                
-                <div class="academic-list-box">
-                    <p>My core focus areas include:</p>
-                    <ul>
-                        <li>Explainable Deep Learning frameworks for medical diagnostic support.</li>
-                        <li>Data Analytics and Machine Learning models for predictive modeling.</li>
-                        <li>Developing secure, data-driven applications in CSE.</li>
-                    </ul>
+
+                <div class="skills-box">
+                    <p><strong>Technical Skills:</strong> Python, Java, C, PHP, Machine Learning, Deep Learning, Data Analysis, SHAP (XAI), MySQL, Oracle</p>
+                    <p style="margin-top: 8px;"><strong>Soft Skills:</strong> Research & Analytical Thinking • Problem Solving • Communication • Teamwork • Time Management • Adaptability • Continuous Learning</p>
                 </div>
             </section>
 
@@ -84,23 +307,25 @@
             <section id="education" class="main-section">
                 <h2 class="section-title">Education</h2>
                 
-                <div class="academic-card">
-                    <div class="academic-card-header">
+                
+                <div class="edu-card">
+                    <div class="edu-header">
                         MSc in Computer Science and Engineering [Running]
                     </div>
-                    <div class="academic-card-body">
-                        <p><strong>Department of Computer Science & Engineering</strong></p>
+                    <div class="edu-body">
+                        <p><strong>Department of Computer Science and Engineering</strong></p>
                         <p>Daffodil International University, Bangladesh</p>
                         <p><strong>Major:</strong> Data Science</p>
                     </div>
                 </div>
 
-                <div class="academic-card">
-                    <div class="academic-card-header">
+                
+                <div class="edu-card">
+                    <div class="edu-header">
                         BSc in Computer Science and Engineering
                     </div>
-                    <div class="academic-card-body">
-                        <p><strong>Department of Computer Science & Engineering</strong></p>
+                    <div class="edu-body">
+                        <p><strong>Department of Computer Science and Engineering</strong></p>
                         <p>Daffodil International University, Bangladesh</p>
                     </div>
                 </div>
@@ -110,11 +335,11 @@
             <section id="research" class="main-section">
                 <h2 class="section-title">Research Interests</h2>
                 
-                <div class="academic-card">
-                    <div class="academic-card-header">
+                <div class="edu-card">
+                    <div class="edu-header">
                         Current Research Focus
                     </div>
-                    <div class="academic-card-body">
+                    <div class="edu-body">
                         <p>My current research explores the application of Deep Learning for ADHD detection and prediction, with a focus on developing accurate and interpretable AI models for healthcare decision support.</p>
                         <br>
                         <p><strong>Keywords:</strong> Artificial Intelligence • Machine Learning • Deep Learning • Explainable AI (XAI) • Healthcare Analytics • Data Science</p>
@@ -126,11 +351,11 @@
             <section id="publications" class="main-section">
                 <h2 class="section-title">Publications & Forthcoming Work</h2>
                 
-                <div class="academic-card">
-                    <div class="academic-card-header">
+                <div class="edu-card">
+                    <div class="edu-header">
                         Forthcoming / Ongoing Research
                     </div>
-                    <div class="academic-card-body">
+                    <div class="edu-body">
                         <p><strong>Explainable Deep Learning Based ADHD Detection of Children Using Behavioral and Demographic Data</strong></p>
                         <p><em>Status: Working Paper / Ongoing Research</em></p>
                         <p>This study applies explainable deep learning frameworks to detect ADHD in children based on behavioral patterns and demographic factors.</p>
@@ -142,11 +367,11 @@
             <section id="projects" class="main-section">
                 <h2 class="section-title">Projects</h2>
                 
-                <div class="academic-card">
-                    <div class="academic-card-header">
+                <div class="edu-card">
+                    <div class="edu-header">
                         Domestic Animal Farm Management System
                     </div>
-                    <div class="academic-card-body">
+                    <div class="edu-body">
                         <p>A computer science project designed to streamline administrative operations, livestock tracking, and records management for animal farms.</p>
                     </div>
                 </div>
@@ -155,7 +380,7 @@
             
             <section id="contact" class="main-section">
                 <h2 class="section-title">Contact Information</h2>
-                <div class="academic-card-body" style="border: 1px solid #ccc; border-radius: 4px; padding: 15px;">
+                <div class="edu-body" style="border: 1px solid #3182ce; border-radius: 4px;">
                     <p><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> 261-25-010@diu.edu.bd</p>
                     <p><i class="fa-solid fa-phone"></i> <strong>Phone:</strong> 01788913280</p>
                     <p><i class="fa-solid fa-building-columns"></i> <strong>Institution:</strong> Daffodil International University, Bangladesh</p>

@@ -8,8 +8,249 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
-    <!-- CSS stylesheet -->
-    <link rel="stylesheet" href="./css/style.css">
+    
+    <style>
+        /* ==========================================
+           GLOBAL RESETS & STYLES
+           ========================================== */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Roboto', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #ffffff;
+            color: #333333;
+            line-height: 1.6;
+        }
+
+        a {
+            color: #2b6cb0;
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        /* ==========================================
+           TOP NAVIGATION BAR
+           ========================================== */
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 10%;
+            background-color: #ffffff;
+            border-bottom: 1px solid #e2e8f0;
+        }
+
+        .site-title {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #2d3748;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+
+        .nav-links a {
+            color: #4a5568;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        .nav-links a:hover {
+            color: #2b6cb0;
+        }
+
+        /* ==========================================
+           LAYOUT STRUCTURE
+           ========================================== */
+        .page-wrapper {
+            display: flex;
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+            gap: 40px;
+        }
+
+        /* ==========================================
+           LEFT SIDEBAR
+           ========================================== */
+        .sidebar {
+            width: 250px;
+            flex-shrink: 0;
+        }
+
+        .profile-container {
+            width: 180px;
+            height: 200px;
+            border: 1px solid #cbd5e0;
+            padding: 4px;
+            background-color: #fff;
+            margin-bottom: 15px;
+        }
+
+        .profile-pic {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .sidebar-email {
+            font-size: 0.85rem;
+            color: #4a5568;
+            margin-bottom: 15px;
+        }
+
+        .sidebar-socials {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 25px;
+        }
+
+        .sidebar-socials a {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 30px;
+            height: 30px;
+            background-color: #3182ce;
+            color: #ffffff !important;
+            border-radius: 3px;
+            font-size: 0.9rem;
+        }
+
+        .sidebar-links-box h4 {
+            font-size: 1.1rem;
+            color: #2d3748;
+            margin-bottom: 10px;
+        }
+
+        .sidebar-links-box ul {
+            list-style-type: none;
+        }
+
+        .sidebar-links-box li {
+            font-size: 0.85rem;
+            margin-bottom: 8px;
+            padding-left: 12px;
+            position: relative;
+        }
+
+        .sidebar-links-box li::before {
+            content: "📌";
+            position: absolute;
+            left: 0;
+            font-size: 0.75rem;
+        }
+
+        /* ==========================================
+           MAIN CONTENT AREA
+           ========================================== */
+        .content {
+            flex-grow: 1;
+        }
+
+        .main-section {
+            margin-bottom: 35px;
+        }
+
+        .welcome-heading {
+            font-size: 1.8rem;
+            color: #2d3748;
+            font-weight: 500;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 8px;
+        }
+
+        /* BRIGHT BLUE SECTION HEADINGS */
+        .section-title {
+            font-size: 1.5rem;
+            color: #0000ff !important;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .about-text {
+            font-size: 0.95rem;
+            color: #2d3748;
+            margin-bottom: 12px;
+        }
+
+        .skills-box {
+            margin-top: 15px;
+            padding: 12px;
+            background-color: #f7fafc;
+            border: 1px solid #e2e8f0;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            color: #2d3748;
+        }
+
+        /* ==========================================
+           BLUE ACADEMIC CARD BANNERS (MATCHING SCREENSHOT)
+           ========================================== */
+        .edu-card {
+            border: 1px solid #3182ce !important;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            overflow: hidden;
+            background-color: #ffffff;
+        }
+
+        .edu-header {
+            background-color: #3182ce !important;
+            color: #ffffff !important;
+            font-weight: 600;
+            font-size: 1.05rem;
+            padding: 10px 15px;
+        }
+
+        .edu-body {
+            padding: 15px;
+            color: #2d3748;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        .edu-body p {
+            margin-bottom: 4px;
+        }
+
+        .edu-body p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* ==========================================
+           FOOTER
+           ========================================== */
+        footer {
+            text-align: center;
+            padding: 20px;
+            border-top: 1px solid #e2e8f0;
+            font-size: 0.85rem;
+            color: #718096;
+            margin-top: 40px;
+        }
+
+        /* MOBILE ADAPTATION */
+        @media (max-width: 768px) {
+            .page-wrapper {
+                flex-direction: column;
+            }
+            .navbar {
+                flex-direction: column;
+                gap: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
 
@@ -70,14 +311,8 @@
                 </p>
 
                 <div class="skills-box">
-                    <p><strong>Technical Skills:</strong></p>
-                    <p>• Programming: Python, Java, C, PHP</p>
-                    <p>• Data Science & AI: Machine Learning, Deep Learning, Data Analysis, SHAP (XAI)</p>
-                    <p>• Tools: Google Colab, Jupyter Notebook, Kaggle, Git, GitHub, Hugo</p>
-                    <p>• Database: MySQL, Oracle</p>
-                    <br>
-                    <p><strong>Soft Skills:</strong></p>
-                    <p>Research & Analytical Thinking • Problem Solving • Communication • Teamwork • Time Management • Adaptability • Continuous Learning</p>
+                    <p><strong>Technical Skills:</strong> Python, Java, C, PHP, Machine Learning, Deep Learning, Data Analysis, SHAP (XAI), MySQL, Oracle</p>
+                    <p style="margin-top: 8px;"><strong>Soft Skills:</strong> Research & Analytical Thinking • Problem Solving • Communication • Teamwork • Time Management • Adaptability • Continuous Learning</p>
                 </div>
             </section>
 
