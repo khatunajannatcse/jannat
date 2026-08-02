@@ -1,89 +1,119 @@
-/* RESET & FONTS */
+/* ==========================================
+   GLOBAL VARIABLES & COLOR PALETTE
+   ========================================== */
+:root {
+    --primary-color: #4f46e5;       /* Deep Modern Indigo */
+    --primary-hover: #4338ca;       /* Darker Indigo on hover */
+    --bg-main: #f8fafc;             /* Light Slate Background */
+    --card-bg: #ffffff;             /* Pure White Cards */
+    --text-primary: #0f172a;        /* Deep Dark Text */
+    --text-secondary: #475569;      /* Soft Muted Text */
+    --accent-bg: #e0e7ff;           /* Soft Indigo for Skill Tags */
+    --border-color: #e2e8f0;        /* Light Grey Borders */
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+/* ==========================================
+   RESET & BASE STYLES
+   ========================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif;
+    scroll-behavior: smooth;
 }
 
 body {
-    background-color: #f4f7f6;
-    color: #2d3748;
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
     line-height: 1.6;
 }
 
-/* NAVBAR (DESKTOP) */
+a {
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+a:hover {
+    color: var(--primary-hover);
+}
+
+/* ==========================================
+   NAVIGATION BAR
+   ========================================== */
 .navbar {
-    position: fixed;
+    position: sticky;
     top: 0;
-    left: 0;
-    width: 100%;
-    min-height: 70px;
-    background-color: #ffffff;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    z-index: 1000;
+    background-color: var(--card-bg);
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 40px;
-    z-index: 1000;
+    padding: 15px 40px;
+    border-bottom: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
 }
 
 .site-title {
-    font-size: 1.4rem;
+    font-size: 1.25rem;
     font-weight: 700;
-    color: #1a202c;
+    color: var(--primary-color);
 }
 
-.navbar nav, .nav-links {
+.nav-links {
     display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
+    gap: 20px;
 }
 
-.navbar nav a, .nav-links a {
-    text-decoration: none;
-    color: #4a5568;
-    font-weight: 600;
+.nav-links a {
+    color: var(--text-secondary);
+    font-weight: 500;
     font-size: 0.95rem;
-    transition: color 0.2s;
 }
 
-.navbar nav a:hover, .nav-links a:hover {
-    color: #1a73e8;
+.nav-links a:hover {
+    color: var(--primary-color);
 }
 
-/* PAGE WRAPPER */
+/* ==========================================
+   MAIN PAGE LAYOUT (SIDEBAR + CONTENT)
+   ========================================== */
 .page-wrapper {
     max-width: 1200px;
-    margin: 100px auto 40px auto;
+    margin: 30px auto;
+    padding: 0 20px;
     display: flex;
     gap: 30px;
-    padding: 0 20px;
-    align-items: flex-start;
 }
 
-/* LEFT SIDEBAR */
+/* ==========================================
+   LEFT SIDEBAR
+   ========================================== */
 .sidebar {
-    width: 310px;
+    width: 300px;
     flex-shrink: 0;
-    background: #ffffff;
+    background-color: var(--card-bg);
     padding: 30px 20px;
     border-radius: 16px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
-    border: 1px solid #e2e8f0;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-md);
     text-align: center;
-    position: -webkit-sticky;
+    align-self: flex-start;
     position: sticky;
     top: 90px;
 }
 
 .profile-container {
-    width: 160px;
-    height: 160px;
-    margin: 0 auto 15px auto;
+    width: 140px;
+    height: 140px;
+    margin: 0 auto 15px;
     border-radius: 50%;
     overflow: hidden;
-    border: 4px solid #1a73e8;
+    border: 3px solid var(--primary-color);
 }
 
 .profile-pic {
@@ -95,195 +125,209 @@ body {
 .sidebar-name {
     font-size: 1.4rem;
     font-weight: 700;
-    color: #1a202c;
+    color: var(--text-primary);
     margin-bottom: 5px;
 }
 
 .sidebar-role {
-    font-size: 0.95rem;
-    color: #2d3748;
+    color: var(--primary-color);
+    font-weight: 600;
+    margin-bottom: 2px;
 }
 
 .sidebar-dept, .sidebar-major {
-    font-size: 0.85rem;
-    color: #718096;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
 }
 
 .sidebar-location, .sidebar-email {
     font-size: 0.85rem;
-    color: #4a5568;
+    color: var(--text-secondary);
     margin-top: 10px;
+    word-break: break-all;
 }
 
-.sidebar-email a {
-    color: #1a73e8;
-    text-decoration: none;
+.sidebar-location i, .sidebar-email i {
+    color: var(--primary-color);
+    margin-right: 5px;
 }
 
 .sidebar-socials {
-    margin: 20px 0;
     display: flex;
     justify-content: center;
     gap: 15px;
+    margin: 20px 0;
 }
 
 .sidebar-socials a {
-    color: #1a73e8;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.sidebar-socials a:hover {
+    color: var(--primary-color);
+    transform: translateY(-2px);
 }
 
 .download-cv-btn {
     display: block;
     width: 100%;
     padding: 10px 0;
-    background-color: #1a73e8;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 8px;
+    background-color: var(--primary-color);
+    color: #ffffff !important;
     font-weight: 600;
-    font-size: 0.9rem;
+    border-radius: 8px;
+    text-align: center;
+    transition: background-color 0.2s ease;
 }
 
-/* RIGHT CONTENT */
+.download-cv-btn:hover {
+    background-color: var(--primary-hover);
+}
+
+/* ==========================================
+   RIGHT MAIN CONTENT
+   ========================================== */
 .content {
-    flex: 1;
-    background: #ffffff;
-    padding: 40px;
-    border-radius: 16px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.04);
-    border: 1px solid #e2e8f0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
 }
 
 section {
-    margin-bottom: 35px;
+    background-color: var(--card-bg);
+    padding: 25px 30px;
+    border-radius: 16px;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow 0.2s ease;
+}
+
+section:hover {
+    box-shadow: var(--shadow-md);
 }
 
 section h2 {
     font-size: 1.5rem;
-    color: #1a202c;
-    border-bottom: 3px solid #1a73e8;
-    display: inline-block;
-    padding-bottom: 4px;
-    margin-bottom: 18px;
+    color: var(--text-primary);
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--accent-bg);
 }
 
 .about-text {
-    margin-bottom: 15px;
-    color: #4a5568;
+    color: var(--text-secondary);
+    font-size: 0.98rem;
+    text-align: justify;
+}
+
+/* ==========================================
+   SKILLS & CARDS STYLING
+   ========================================== */
+.skills-group {
+    background-color: var(--bg-main);
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 0.92rem;
+    color: var(--text-secondary);
 }
 
 .skills-group p {
     margin-bottom: 8px;
-    font-size: 0.95rem;
+}
+
+.skills-group p:last-child {
+    margin-bottom: 0;
 }
 
 .card-item {
-    background-color: #f8fafc;
-    border-left: 4px solid #1a73e8;
-    padding: 15px 20px;
-    border-radius: 4px;
+    background-color: var(--bg-main);
+    padding: 18px 20px;
+    border-radius: 12px;
     margin-bottom: 15px;
+    border-left: 4px solid var(--primary-color);
+}
+
+.card-item:last-child {
+    margin-bottom: 0;
 }
 
 .card-item h3 {
     font-size: 1.1rem;
-    color: #1a202c;
-    margin-bottom: 4px;
+    color: var(--text-primary);
+    margin-bottom: 5px;
 }
 
-.institution, .status {
+.card-item .institution, .card-item .status {
     font-size: 0.9rem;
-    color: #718096;
+    color: var(--text-secondary);
+    margin-bottom: 8px;
 }
 
+/* ==========================================
+   TAGS & RESEARCH CARDS
+   ========================================== */
 .interest-tags {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .tag-box {
-    background-color: #edf2f7;
-    color: #2d3748;
-    padding: 6px 14px;
-    border-radius: 6px;
-    font-size: 0.85rem;
+    background-color: var(--accent-bg);
+    color: var(--primary-color);
     font-weight: 500;
+    font-size: 0.85rem;
+    padding: 6px 14px;
+    border-radius: 20px;
 }
 
 .current-research-card {
-    background-color: #f8fafc;
-    border: 1px solid #e2e8f0;
-    padding: 15px 20px;
-    border-radius: 8px;
-}
-
-/* FOOTER */
-footer {
-    background-color: #1a73e8;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-    margin-top: 50px;
+    background-color: var(--bg-main);
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    color: var(--text-secondary);
 }
 
 /* ==========================================
-   MOBILE PHONE SCREEN FIX (AFIA'S STACKED STYLE)
+   FOOTER
    ========================================== */
-@media screen and (max-width: 850px) {
+footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-secondary);
+    font-size: 0.85rem;
+    border-top: 1px solid var(--border-color);
+    margin-top: 40px;
+    background-color: var(--card-bg);
+}
+
+/* ==========================================
+   RESPONSIVE DESIGN (MOBILE ADAPTATION)
+   ========================================== */
+@media (max-width: 850px) {
     .navbar {
-        position: relative !important;
-        display: flex !important;
-        flex-direction: column !important; /* Stack Name on top, Links below */
-        justify-content: center !important;
-        align-items: center !important;
-        padding: 20px 10px 15px 10px !important;
-        height: auto !important;
-        background-color: #ffffff !important;
-        box-shadow: none !important;
-        border-bottom: 1px solid #e2e8f0 !important;
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px 20px;
     }
 
-    .site-title {
-        font-size: 1.8rem !important;
-        font-weight: 700 !important;
-        color: #1a202c !important;
-        margin-bottom: 12px !important;
-        text-align: center !important;
-        width: 100 !important;
-    }
-
-    .navbar nav, .nav-links {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-        align-items: center !important;
-        gap: 8px 14px !important;
-        width: 100% !important;
-    }
-
-    .navbar nav a, .nav-links a {
-        font-size: 0.92rem !important;
-        font-weight: 600 !important;
-        color: #2d3748 !important;
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
     }
 
     .page-wrapper {
-        flex-direction: column !important;
-        margin-top: 20px !important;
-        padding: 0 15px !important;
+        flex-direction: column;
     }
 
     .sidebar {
-        width: 100% !important;
-        position: relative !important;
-        top: 0 !important;
-        margin-bottom: 20px !important;
-    }
-
-    .content {
-        width: 100% !important;
-        padding: 25px 18px !important;
+        width: 100%;
+        position: static;
     }
 }
