@@ -149,10 +149,10 @@ a:hover {
 }
 
 .section-title {
-    font-size: 1.4rem;
-    color: #0000ff; /* Blue title matching 2nd picture */
+    font-size: 1.5rem;
+    color: #0000ff; /* Bright blue section heading */
     font-weight: bold;
-    margin-bottom: 15px;
+    margin-bottom: 20px;
 }
 
 .about-text {
@@ -161,37 +161,46 @@ a:hover {
     margin-bottom: 12px;
 }
 
-.academic-list-box {
+.skills-box {
     margin-top: 15px;
-    font-size: 0.95rem;
+    padding: 12px;
+    background-color: #f7fafc;
+    border: 1px solid #e2e8f0;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    color: #2d3748;
 }
 
-.academic-list-box ul {
-    margin-left: 20px;
-    margin-top: 5px;
-}
-
-/* BLUE ACADEMIC CARD BOXES (MATCHING IMAGE 2) */
-.academic-card {
+/* BLUE ACADEMIC CARD BOXES (MATCHING YOUR SCREENSHOT) */
+.edu-card {
     border: 1px solid #3182ce;
     border-radius: 4px;
     margin-bottom: 20px;
     overflow: hidden;
-}
-
-.academic-card-header {
-    background-color: #3182ce; /* Academic Blue Box Header */
-    color: #ffffff;
-    font-weight: bold;
-    padding: 10px 15px;
-    font-size: 1rem;
-}
-
-.academic-card-body {
-    padding: 15px;
     background-color: #ffffff;
-    font-size: 0.92rem;
+}
+
+.edu-header {
+    background-color: #3182ce; /* Solid blue header banner */
+    color: #ffffff;             /* White text */
+    font-weight: 600;
+    font-size: 1.05rem;
+    padding: 10px 15px;
+}
+
+.edu-body {
+    padding: 15px;
     color: #2d3748;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+.edu-body p {
+    margin-bottom: 4px;
+}
+
+.edu-body p:last-child {
+    margin-bottom: 0;
 }
 
 /* FOOTER */
