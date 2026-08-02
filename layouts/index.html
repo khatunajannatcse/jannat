@@ -7,7 +7,7 @@
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <!-- CSS stylesheet -->
     <link rel="stylesheet" href="./css/style.css">
 </head>
@@ -17,10 +17,11 @@
     <header class="navbar">
         <div class="site-title">Khatun A Jannat</div>
         <nav class="nav-links">
-            <a href="#about">About</a>
+            <a href="#about">About Me</a>
             <a href="#education">Education</a>
             <a href="#research">Research</a>
-            <a href="#publications">Publication</a>
+            <a href="#publications">Publications</a>
+            <a href="./cv.pdf" target="_blank">CV</a>
             <a href="#projects">Projects</a>
             <a href="#contact">Contact</a>
         </nav>
@@ -34,111 +35,130 @@
             <div class="profile-container">
                 <img src="./profile.jpeg" alt="Khatun A Jannat" class="profile-pic">
             </div>
-            
-            <h1 class="sidebar-name">Khatun A Jannat</h1>
-            
-            <p class="sidebar-role"><strong>M.Sc. Student</strong></p>
-            <p class="sidebar-dept">Computer Science & Engineering</p>
-            <p class="sidebar-major">Major in Data Science</p>
-
-            <p class="sidebar-location">
-                <i class="fa-solid fa-location-dot"></i> Dhaka, Bangladesh
-            </p>
 
             <p class="sidebar-email">
-                <i class="fa-solid fa-envelope"></i> 
-                <a href="mailto:261-25-010@diu.edu.bd">261-25-010@diu.edu.bd</a>
+                E. <strong>261-25-010@diu.edu.bd</strong>
             </p>
 
             <div class="sidebar-socials">
                 <a href="https://github.com/khatunajannatcse" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
                 <a href="#" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="#" target="_blank" title="Google Scholar"><i class="fa-solid fa-graduation-cap"></i></a>
+                <a href="#" target="_blank" title="ResearchGate"><i class="fa-brands fa-researchgate"></i></a>
             </div>
 
-            <a href="./cv.pdf" target="_blank" class="download-cv-btn">Download CV</a>
+            <div class="sidebar-links-box">
+                <h4>Links</h4>
+                <ul>
+                    <li><a href="https://daffodilvarsity.edu.bd" target="_blank">Daffodil International University</a></li>
+                    <li><a href="https://github.com/khatunajannatcse" target="_blank">GitHub Projects</a></li>
+                </ul>
+            </div>
         </aside>
 
         <!-- RIGHT MAIN CONTENT -->
         <main class="content">
             
             <!-- ABOUT SECTION -->
-            <section id="about">
-                <h2>About Me</h2>
+            <section id="about" class="main-section">
+                <h1 class="welcome-heading">Welcome to my personal homepage</h1>
                 <p class="about-text">
-                    I am Khatun A Jannat, an MSc student in Computer Science and Engineering (Data Science) at Daffodil International University. My research interests include Machine Learning, Deep Learning, Explainable AI (XAI), Healthcare Analytics, and Intelligent Data-Driven Systems. I am passionate about using AI and data science to solve real-world problems and create positive social impact.
+                    I am Khatun A Jannat, an MSc student in Computer Science and Engineering (Data Science) at Daffodil International University. My research interests include Machine Learning, Deep Learning, Explainable AI (XAI), Healthcare Analytics, and Intelligent Data-Driven Systems.
+                </p>
+                <p class="about-text">
+                    I am passionate about using AI and data science to solve real-world problems and create positive social impact. My mission is to contribute to the development of intelligent, interpretable software and decision support systems for societal benefit.
                 </p>
                 
-                <h3 style="font-size: 1.15rem; color: #1a202c; margin-top: 20px; margin-bottom: 10px;">Technical Skills</h3>
-                <div class="skills-group">
-                    <p><strong>Programming:</strong> Python, Java, C, PHP</p>
-                    <p><strong>Data Science & AI:</strong> Machine Learning, Deep Learning, Data Analysis, SHAP (XAI)</p>
-                    <p><strong>Tools:</strong> Google Colab, Jupyter Notebook, Kaggle, Git, GitHub, Hugo</p>
-                    <p><strong>Database:</strong> MySQL, Oracle</p>
-                </div>
-
-                <h3 style="font-size: 1.15rem; color: #1a202c; margin-top: 20px; margin-bottom: 10px;">Soft Skills</h3>
-                <div class="skills-group">
-                    <p>Research & Analytical Thinking • Problem Solving • Communication • Teamwork • Time Management • Adaptability • Continuous Learning</p>
+                <div class="academic-list-box">
+                    <p>My core focus areas include:</p>
+                    <ul>
+                        <li>Explainable Deep Learning frameworks for medical diagnostic support.</li>
+                        <li>Data Analytics and Machine Learning models for predictive modeling.</li>
+                        <li>Developing secure, data-driven applications in CSE.</li>
+                    </ul>
                 </div>
             </section>
 
             <!-- EDUCATION SECTION -->
-            <section id="education">
-                <h2>Education</h2>
-                <div class="card-item">
-                    <h3>Master of Science in CSE (Running)</h3>
-                    <p class="institution">Major in Data Science — Daffodil International University</p>
+            <section id="education" class="main-section">
+                <h2 class="section-title">Education</h2>
+                
+                <div class="academic-card">
+                    <div class="academic-card-header">
+                        MSc in Computer Science and Engineering [Running]
+                    </div>
+                    <div class="academic-card-body">
+                        <p><strong>Department of Computer Science & Engineering</strong></p>
+                        <p>Daffodil International University, Bangladesh</p>
+                        <p><strong>Major:</strong> Data Science</p>
+                    </div>
                 </div>
-                <div class="card-item">
-                    <h3>Bachelor of Science in Computer Science and Engineering</h3>
-                    <p class="institution">Daffodil International University</p>
+
+                <div class="academic-card">
+                    <div class="academic-card-header">
+                        BSc in Computer Science and Engineering
+                    </div>
+                    <div class="academic-card-body">
+                        <p><strong>Department of Computer Science & Engineering</strong></p>
+                        <p>Daffodil International University, Bangladesh</p>
+                    </div>
                 </div>
             </section>
 
             <!-- RESEARCH SECTION -->
-            <section id="research">
-                <h2>Research Interests</h2>
+            <section id="research" class="main-section">
+                <h2 class="section-title">Research Interests</h2>
                 
-                <div class="interest-tags">
-                    <span class="tag-box">Artificial Intelligence</span>
-                    <span class="tag-box">Machine Learning</span>
-                    <span class="tag-box">Deep Learning</span>
-                    <span class="tag-box">Explainable AI</span>
-                    <span class="tag-box">Healthcare Analytics</span>
-                    <span class="tag-box">Data Science</span>
-                </div>
-
-                <div class="current-research-card">
-                    <p><strong>Current Research:</strong> My current research explores the application of Deep Learning for ADHD detection and prediction, with a focus on developing accurate and interpretable AI models for healthcare decision support.</p>
+                <div class="academic-card">
+                    <div class="academic-card-header">
+                        Current Research Focus
+                    </div>
+                    <div class="academic-card-body">
+                        <p>My current research explores the application of Deep Learning for ADHD detection and prediction, with a focus on developing accurate and interpretable AI models for healthcare decision support.</p>
+                        <br>
+                        <p><strong>Keywords:</strong> Artificial Intelligence • Machine Learning • Deep Learning • Explainable AI (XAI) • Healthcare Analytics • Data Science</p>
+                    </div>
                 </div>
             </section>
 
             <!-- PUBLICATIONS SECTION -->
-            <section id="publications">
-                <h2>Publications & Forthcoming Work</h2>
-                <div class="card-item">
-                    <h3>Explainable Deep Learning Based ADHD Detection of Children Using Behavioral and Demographic Data</h3>
-                    <p class="status"><em>Status: Working Paper / Ongoing Research</em></p>
-                    <p>This study applies explainable deep learning frameworks to detect ADHD in children based on behavioral patterns and demographic factors.</p>
+            <section id="publications" class="main-section">
+                <h2 class="section-title">Publications & Forthcoming Work</h2>
+                
+                <div class="academic-card">
+                    <div class="academic-card-header">
+                        Forthcoming / Ongoing Research
+                    </div>
+                    <div class="academic-card-body">
+                        <p><strong>Explainable Deep Learning Based ADHD Detection of Children Using Behavioral and Demographic Data</strong></p>
+                        <p><em>Status: Working Paper / Ongoing Research</em></p>
+                        <p>This study applies explainable deep learning frameworks to detect ADHD in children based on behavioral patterns and demographic factors.</p>
+                    </div>
                 </div>
             </section>
 
             <!-- PROJECTS SECTION -->
-            <section id="projects">
-                <h2>Projects</h2>
-                <div class="card-item">
-                    <h3>Domestic Animal Farm Management System</h3>
-                    <p>A computer science project designed to streamline administrative operations, livestock tracking, and records management for animal farms.</p>
+            <section id="projects" class="main-section">
+                <h2 class="section-title">Projects</h2>
+                
+                <div class="academic-card">
+                    <div class="academic-card-header">
+                        Domestic Animal Farm Management System
+                    </div>
+                    <div class="academic-card-body">
+                        <p>A computer science project designed to streamline administrative operations, livestock tracking, and records management for animal farms.</p>
+                    </div>
                 </div>
             </section>
 
             <!-- CONTACT SECTION -->
-            <section id="contact">
-                <h2>Contact Information</h2>
-                <p><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> <a href="mailto:261-25-010@diu.edu.bd">261-25-010@diu.edu.bd</a></p>
-                <p><i class="fa-solid fa-phone"></i> <strong>Phone:</strong> 01788913280</p>
-                <p><i class="fa-solid fa-building-columns"></i> <strong>Institution:</strong> Daffodil International University, Bangladesh</p>
+            <section id="contact" class="main-section">
+                <h2 class="section-title">Contact Information</h2>
+                <div class="academic-card-body" style="border: 1px solid #ccc; border-radius: 4px; padding: 15px;">
+                    <p><i class="fa-solid fa-envelope"></i> <strong>Email:</strong> 261-25-010@diu.edu.bd</p>
+                    <p><i class="fa-solid fa-phone"></i> <strong>Phone:</strong> 01788913280</p>
+                    <p><i class="fa-solid fa-building-columns"></i> <strong>Institution:</strong> Daffodil International University, Bangladesh</p>
+                </div>
             </section>
 
         </main>
@@ -146,8 +166,7 @@
 
     <!-- FOOTER -->
     <footer>
-        <p>© 2026 Khatun A Jannat</p>
-        <p>Built with Hugo</p>
+        <p>© 2026 Khatun A Jannat — Academic Homepage</p>
     </footer>
 
 </body>
